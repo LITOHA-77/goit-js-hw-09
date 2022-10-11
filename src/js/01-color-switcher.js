@@ -15,6 +15,8 @@ function onFonChange() {
   refs.body.style.backgroundColor = getRandomHexColor();
 }
 
+let idChangeColor = null;
+
 function fonChangeStart() {
   idChangeColor = setInterval(() => {
     onFonChange();
