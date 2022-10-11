@@ -1,6 +1,7 @@
 import flatpickr from 'flatpickr';
 
 import 'flatpickr/dist/flatpickr.min.css';
+
 import { Notify } from 'notiflix';
 
 const refs = {
@@ -43,11 +44,11 @@ function onStartClick() {
   refs.input.disabled = true;
   timerID = setInterval(() => {
     difference = SELECT_DAY - Date.now();
-    let ccc = convertMs(difference);
+    let rounding = convertMs(difference);
     if (difference <= 0) {
       clearInterval(timerId);
     } else {
-      addLeadingZero(ccc);
+      addLeadingZero(rounding);
     }
   }, 1000);
 }

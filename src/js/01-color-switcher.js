@@ -16,13 +16,13 @@ function onFonChange() {
 }
 
 function fonChangeStart() {
-  id = setInterval(() => {
+  idChangeColor = setInterval(() => {
     onFonChange();
   }, 1000);
   refs.start.disabled = true;
 }
 
 function fonChangeStop() {
-  clearInterval(id);
+  clearInterval(idChangeColor);
   refs.start.disabled = false;
 }
